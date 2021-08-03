@@ -107,7 +107,7 @@ const task7 = () => {
   console.log(arr[2][3]); // = 6
   console.log(arr[6][6]); // = 36
 };
-
+task7();
 //Доп задание  "aabbbc" = "2a3b1c"
 let additionalTask = (str) => {
   let str = "aabbbc";
