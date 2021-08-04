@@ -38,7 +38,8 @@ const task3 = () => {
   arr.splice(4, 0, arr[index]);
   arr.splice(index, 1);
   [arr[5], arr[6]] = [arr[6], arr[5]];
-  console.log(arr);
+  let str = arr.join(" ");
+  console.log(str);
 };
 task3();
 
@@ -54,8 +55,8 @@ const task4And5 = () => {
   };
   let personKey = prompt("Введите свойство");
   personKey in person
-    ? alert("alolollo")
-    : (person[personKey] = prompt("введи значение"));
+    ? alert(`свойство '${personKey}' уже существует`)
+    : (person[personKey] = prompt("введи новое значение"));
 
   //5.Сгенерируйте объект, описывающий модель телефона,
   // заполнив все свойства значениями, прочитанными из
@@ -71,6 +72,7 @@ const task4And5 = () => {
   };
   person.mobile = mobile;
   //person.mobile = {...mobile}; - не ссылка а копирование.
+  console.log(person)
 };
 task4And5();
 
@@ -82,7 +84,7 @@ const task6 = () => {
   const arr = [];
   let promPoPom;
   let sum = 0;
-  while (promPoPom !== null) {
+  while (!(promPoPom === null)) {
     promPoPom = prompt("введите любой символ");
     arr.push(promPoPom);
   }
@@ -92,7 +94,7 @@ const task6 = () => {
   });
   alert(sum);
 };
-
+task6();
 //7.Используя вложенные циклы, сформируйте двумерный массив,
 // содержащий таблицу умножения
 
